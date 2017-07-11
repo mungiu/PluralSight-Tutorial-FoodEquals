@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +25,7 @@ namespace APFoodEquals
             DisplayWhetherEqual(apple, apple);
         }
 
-        static void DisplayWhetherEqual(Food food1, Food food2)
+        static void DisplayWhetherEqual(object food1, object food2)
         {
             if (food1 == food2)
                 Console.WriteLine(string.Format("{0,12} == {1}", food1, food2));

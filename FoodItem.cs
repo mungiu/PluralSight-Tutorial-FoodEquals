@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace APFoodEquals
 {
-    public enum FoodGroup { Meat, Fruit, Vegetables, Sweets }
-
     //inheriting from IEquatable
     //creating a generalized method measure equality of different instances
     public struct FoodItem : IEquatable<FoodItem>
@@ -14,11 +16,11 @@ namespace APFoodEquals
         public string Name { get { return _name; } }
         public FoodGroup Group { get { return _group; } }
 
-        //constructor that sets necessary fields
-        public FoodItem(string Name, FoodGroup Group)
+        //constructor that sets incoming values to necessary fields
+        public FoodItem(string name, FoodGroup group)
         {
-            this._name = Name;
-            this._group = Group;
+            this._name = name;
+            this._group = group;
         }
 
         //converts an object to its string representation
@@ -28,38 +30,37 @@ namespace APFoodEquals
             return _name;
         }
 
-        //overloading equality operator
-        //comparing left hand side fooditem to right hand side food item
-        //notice there is no type check, input parameters have to match exactly
+        //== operator overload
         public static bool operator ==(FoodItem lhs, FoodItem rhs)
         {
+            //calling IEquatable<T> .Equals()
             return lhs.Equals(rhs);
         }
 
-        //ovrloading the inequality operator (required is equality has the same)
+        //same as equality operator
         public static bool operator !=(FoodItem lhs, FoodItem rhs)
         {
             return !lhs.Equals(rhs);
         }
 
         //overriding GetHashCode because it works closely with equality
-        //therefore if equality is overriden than so should GetHasCode();
-        // ^ = the exclusive OR operator
+        // ^ = the exclusive OR operator (we are Exclusive Orring the "GetHashCode()"
+        //invloves XOR the hash code of all the fields used to evaluate equality
         public override int GetHashCode()
         {
             return _name.GetHashCode() ^ _group.GetHashCode();
         }
 
-        //comparing different instances by using IEquatable properties
+        //using IEquatable<T>, a strongly typed equals method
         public bool Equals(FoodItem other)
         {
             return this._name == other._name && this._group == other._group;
         }
 
-        //attempting to perform the same as "public bool Equals" from above
+        //overloading equality operator, type checking
         public override bool Equals(object obj)
         {
-            //checking that object passed as a parameter is a food item
+            //calling IEquatable<T> .Equals()
             //because of the boxing this method is still much slower than IEquatable
             if (obj is FoodItem)
                 return Equals((FoodItem)obj);
