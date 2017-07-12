@@ -8,7 +8,7 @@ namespace APFoodEquals
 {
     //sealed class, means nothing else will ever derive from it
     //affects how we implement equality
-    public sealed class CookedFood : Food
+    public sealed class CookedFood : Food, IEquatable<CookedFood>
     {
         public static bool operator ==(CookedFood x, CookedFood y)
         {
@@ -60,6 +60,14 @@ namespace APFoodEquals
             {
                 return string.Format("{0} {1}", _cookingMethod, Name);
             }
+        }
+
+        //this works because CookedFood is sealed
+        public bool Equals(CookedFood other)
+        {
+            if (!base.Equals(other))
+                return false;
+            return this._cookingMethod == other._cookingMethod;
         }
     }
 }
