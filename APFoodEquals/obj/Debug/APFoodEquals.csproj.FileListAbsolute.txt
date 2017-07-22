@@ -1,0 +1,6 @@
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\bin\Debug\APFoodEquals.exe.config
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\bin\Debug\APFoodEquals.exe
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\bin\Debug\APFoodEquals.pdb
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.csprojResolveAssemblyReference.cache
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.exe
+c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.pdb
