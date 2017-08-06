@@ -10,31 +10,18 @@ namespace APFoodEquals
     {
         static void Main(string[] args)
         {
-            Food[] list =
+            //hashset allows similar items to be added to the list only once
+            //item similarity can be evaluate by default of using customer comparers
+            var foodItems = new HashSet<FoodItem>(EqualityComparer<FoodItem>.Default)
             {
-                new Food("apple", FoodGroup.Fruit),
-                new Food("pear", FoodGroup.Fruit),
-                new CookedFood("baked", "apple", FoodGroup.Fruit)
+                new FoodItem("apple", FoodGroup.Fruit),
+                new FoodItem("pear", FoodGroup.Fruit),
+                new FoodItem("pineapple", FoodGroup.Fruit),
+                new FoodItem("Apple", FoodGroup.Fruit)
             };
-            SortAndShowList(list);
-            Console.WriteLine();
-
-            Food[] list2 =
-            {
-                new CookedFood("baked", "apple", FoodGroup.Fruit),
-                new Food("apple", FoodGroup.Fruit),
-                new Food("pear", FoodGroup.Fruit)
-            };
-            SortAndShowList(list2);
+            foreach (var foodItem in foodItems)
+                Console.WriteLine(foodItem);
         }
 
-        static void SortAndShowList(Food[] list)
-        {
-            Array.Sort(list, FoodNameComparer.Instance);
-
-            foreach (var item in list)
-                Console.WriteLine(item);
-        }
-            
     }
 }
