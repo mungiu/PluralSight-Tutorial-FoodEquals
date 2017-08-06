@@ -69,7 +69,7 @@ namespace APFoodEquals
         //overrided = displays name of food
         public override string ToString()
         {
-            return _name;
+            return string.Format($"{_name}, ({_group})");
         }
     }
 }

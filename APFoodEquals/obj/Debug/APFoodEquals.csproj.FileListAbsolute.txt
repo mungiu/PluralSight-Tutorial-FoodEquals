@@ -4,3 +4,9 @@ c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\
 c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.csprojResolveAssemblyReference.cache
 c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.exe
 c:\users\andrei\documents\visual studio 2017\Projects\APFoodEquals\APFoodEquals\obj\Debug\APFoodEquals.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\bin\Debug\APFoodEquals.exe.config
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\bin\Debug\APFoodEquals.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\bin\Debug\APFoodEquals.pdb
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\obj\Debug\APFoodEquals.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\obj\Debug\APFoodEquals.exe
+C:\Users\User\Documents\Visual Studio 2017\Projects\PluralSight-Tutorial-FoodEquals\APFoodEquals\obj\Debug\APFoodEquals.pdb

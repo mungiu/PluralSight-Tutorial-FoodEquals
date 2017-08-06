@@ -10,27 +10,31 @@ namespace APFoodEquals
     {
         static void Main(string[] args)
         {
-            //instantiated 2 food items using different blueprints but able to assign
-            //both to FoodGroup, since CookedFood inherits from Food
-            Food apple = new Food("apple", FoodGroup.Fruit);
-            Food apple2 = new Food("apple", FoodGroup.Fruit);
-            CookedFood stewedApple = new CookedFood("stewed", "apple", FoodGroup.Fruit);
-            CookedFood bakedApple = new CookedFood("baked", "apple", FoodGroup.Fruit);
-            CookedFood stewedApple2 = new CookedFood("stewed", "apple", FoodGroup.Fruit);
+            Food[] list =
+            {
+                new Food("apple", FoodGroup.Fruit),
+                new Food("pear", FoodGroup.Fruit),
+                new CookedFood("baked", "apple", FoodGroup.Fruit)
+            };
+            SortAndShowList(list);
+            Console.WriteLine();
 
-            DisplayWhetherEqual(apple, stewedApple);
-            DisplayWhetherEqual(stewedApple, bakedApple);
-            DisplayWhetherEqual(stewedApple, stewedApple2);
-            DisplayWhetherEqual(apple, apple2);
-            DisplayWhetherEqual(apple, apple);
+            Food[] list2 =
+            {
+                new CookedFood("baked", "apple", FoodGroup.Fruit),
+                new Food("apple", FoodGroup.Fruit),
+                new Food("pear", FoodGroup.Fruit)
+            };
+            SortAndShowList(list2);
         }
 
-        static void DisplayWhetherEqual(object food1, object food2)
+        static void SortAndShowList(Food[] list)
         {
-            if (food1 == food2)
-                Console.WriteLine(string.Format("{0,12} == {1}", food1, food2));
-            else
-                Console.WriteLine(string.Format("{0,12} != {1}", food1, food2));
+            Array.Sort(list, FoodNameComparer.Instance);
+
+            foreach (var item in list)
+                Console.WriteLine(item);
         }
+            
     }
 }
